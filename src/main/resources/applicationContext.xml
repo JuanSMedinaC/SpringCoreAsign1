@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="HolaMundo" class="com.example.demowebprojectee.HolaMundo">
+        <property name="message" value="Hola Mundo spring!!" />
+    </bean>
+    <bean id="HolaMundo2" class="com.example.demowebprojectee.HolaMundo">
+        <constructor-arg name="message" value="Hola Mundo spring con parametro!!" />
+    </bean>
+    <bean id="HolaMundo3" class="com.example.demowebprojectee.HolaMundo">
+        <constructor-arg name="message" value="Hola Mundo spring con doble parametro!!" />
+        <constructor-arg name="despedida" value="Chao Mundo spring con doble parametro!!" />
+    </bean>
+    <bean id="Arte1" class="com.example.demowebprojectee.Arte">
+        <constructor-arg name="art_id" value="A01" />
+        <constructor-arg name="art_title" value="La Noche estrellada" />
+        <constructor-arg name="artista_name" value="Vincent van Gogh" />
+    </bean>
+    <bean id="Arte2" class="com.example.demowebprojectee.Arte">
+        <constructor-arg name="art_id" value="A02" />
+        <constructor-arg name="art_title" value="La ultima cena" />
+        <constructor-arg name="artista_name" value="Leonardo Da Vinci" />
+    </bean>
+    <bean id="Arte3" class="com.example.demowebprojectee.Arte">
+        <constructor-arg name="art_id" value="A03" />
+        <constructor-arg name="art_title" value="Guernica" />
+        <constructor-arg name="artista_name" value="Pablo Picasso" />
+    </bean>
+</beans>
