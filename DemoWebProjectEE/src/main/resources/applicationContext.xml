@@ -13,19 +13,30 @@
         <constructor-arg name="message" value="Hola Mundo spring con doble parametro!!" />
         <constructor-arg name="despedida" value="Chao Mundo spring con doble parametro!!" />
     </bean>
+    <!-- Constructor vacío -->
+    <bean id="Arte" class="com.example.demowebprojectee.Arte">
+    </bean>
+    <!--Inyección por contructor -->
     <bean id="Arte1" class="com.example.demowebprojectee.Arte">
         <constructor-arg name="art_id" value="A01" />
         <constructor-arg name="art_title" value="La Noche estrellada" />
         <constructor-arg name="artista_name" value="Vincent van Gogh" />
     </bean>
+    <!--Inyección por Setter -->
     <bean id="Arte2" class="com.example.demowebprojectee.Arte">
-        <constructor-arg name="art_id" value="A02" />
-        <constructor-arg name="art_title" value="La ultima cena" />
-        <constructor-arg name="artista_name" value="Leonardo Da Vinci" />
+        <property name="art_id" value="A02" />
+        <property name="art_title" value="La ultima cena" />
+        <property name="artista_name" value="Leonardo Da Vinci" />
     </bean>
-    <bean id="Arte3" class="com.example.demowebprojectee.Arte">
-        <constructor-arg name="art_id" value="A03" />
-        <constructor-arg name="art_title" value="Guernica" />
-        <constructor-arg name="artista_name" value="Pablo Picasso" />
+
+    <!--Inyección por contructor de Blog -->
+    <bean id="Blog" class="com.example.demowebprojectee.MyBlogs">
+        <constructor-arg name="blogName" value="blog.Constructoricesi.edu.co" />
     </bean>
+
+    <!--Inyección por Setter de Blog -->
+    <bean id="Blog1" class="com.example.demowebprojectee.MyBlogs">
+        <property name="blogName" value="blog.Parametroicesi.edu.co" />
+    </bean>
+
 </beans>

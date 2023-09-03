@@ -28,24 +28,28 @@
 
 %>
 <br/>
-<h1> <%= "Lista de obras de arte"%></h1>
+<h1> <%= "Obra de arte"%></h1>
 <ul>
   <%
+    Arte obra = (Arte) context.getBean("Arte");
     Arte obra1 = (Arte) context.getBean("Arte1");
     Arte obra2 = (Arte) context.getBean("Arte2");
-    Arte obra3 = (Arte) context.getBean("Arte3");
   %>
-  <li><b> <%= obra1.toString() %></b> </li>
-  <li><b> <%= obra2.toString() %></b> </li>
-  <li><b> <%= obra3.toString() %></b> </li>
+  <li> <%=obra.toString() %></li>
+  <li> <%=obra1.toString() %></li>
+  <li> <%=obra2.toString() %></li>
 </ul>
 <h1><%= "Blog"%></h1>
 <ul>
 <%
-  ApplicationContext ctx = new AnnotationConfigApplicationContext(Aplicacion.class);
-  MyBlogs blog = (MyBlogs) ctx.getBean(MyBlogs.class);
+  MyBlogs blog = new MyBlogs();
+  MyBlogs blog1 = (MyBlogs) context.getBean("Blog");
+  MyBlogs blog2 = (MyBlogs) context.getBean("Blog1");
 %>
   <li><b> <%=blog.getBlogName()%></b></li>
+  <li><b> <%=blog1.getBlogName()%></b></li>
+  <li><b> <%=blog2.getBlogName()%></b></li>
+
 </ul>
 <a href="hello-servlet">Hello Servlet</a>
 </body>

@@ -2,10 +2,17 @@ package com.example.demowebprojectee;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-@Component("blog")
 public class MyBlogs {
-    @Value("blog.icesi.edu.co")
     private String blogName;
+
+    public MyBlogs() {
+        this.blogName = "blog.icesi.edu.co";
+    }
+
+    public MyBlogs(String blogName) {
+        this.blogName = blogName;
+    }
+
     public String getBlogName() {
         return blogName;
     }

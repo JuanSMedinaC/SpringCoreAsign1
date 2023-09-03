@@ -6,9 +6,9 @@ public class Arte {
     private String artista_name;
 
     public Arte(){
-        art_id="";
-        art_title="";
-        artista_name="";
+        art_id="A00";
+        art_title="Guernica";
+        artista_name="Pablo Picasso";
     }
 
     public Arte(String art_id, String art_title, String artista_name){
