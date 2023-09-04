@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="examen1" class="com.example.sistemaacademico.Examen">
+        <property name="exam_id" value="1" />
+        <property name="exam_title" value="Programación Python" />
+        <property name="exam_score" value="4"/>
+    </bean>
+
+    <bean id="examen2" class="com.example.sistemaacademico.Examen">
+        <property name="exam_id" value="2" />
+        <property name="exam_title" value="Spring Core"/>
+        <property name="exam_score" value="5"/>
+    </bean>
+
+    <bean id="estudiante1" class="com.example.sistemaacademico.StudentResult">
+        <property name="student_name" value="Juan" />
+        <property name="email" value="illojuan@twitch.com"/>
+        <property name="examen" ref="examen1"/>
+    </bean>
+
+    <bean id="estudiante2" class="com.example.sistemaacademico.StudentResult">
+        <property name="student_name" value="David" />
+        <property name="email" value="davidgei@gmail.com"/>
+        <property name="examen" ref="examen2"/>
+    </bean>
+
+    <bean id="autor1" class="com.example.sistemaacademico.Autor">
+        <property name="autor_name" value="Jorge" />
+        <property name="libros" value="ironman, hulk, spiderman"/>
+    </bean>
+
+    <bean id="libro1" class="com.example.sistemaacademico.Libro">
+        <property name="libro_name" value="ironman" />
+        <property name="autor" ref="autor1"/>
+    </bean>
+
+
+    <bean id="libro2" class="com.example.sistemaacademico.Libro">
+        <property name="libro_name" value="hulk" />
+        <property name="autor" ref="autor1"/>
+    </bean>
+
+    <bean id="libro3" class="com.example.sistemaacademico.Libro">
+        <property name="libro_name" value="spiderman" />
+        <property name="autor" ref="autor1"/>
+    </bean>
+
+
+</beans>
